@@ -1,0 +1,15 @@
+message: Keep calm and code on
+
+mongoDBConfiguration:
+  host: localhost
+  port: 27017
+  db: example
+
+logging:
+  file:
+    enabled: false
+    threshold: ALL
+    currentLogFilename: /logs/dropwizard/example.log
+    archivedLogFilenamePattern: /logs/dropwizard/example-%d.log.gz
+    archivedFileCount: 5
+    timeZone: UTC

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="notesApp">
+<head>
+    <title>Dropwizard example</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <script type="text/javascript" src="/assets/js/angular.js"></script>
+    <script type="text/javascript" src="/assets/js/notes.js"></script>
+</head>
+<body>
+<div ng-controller="NotesFormCtrl">
+    <form ng-submit="addNote()">
+        <legend>Create Note</legend>
+        <label>Subject</label>
+        <input type="text" name="subject" ng-model="note.subject" placeholder="Subject">
+        <label>message</label>
+        <input type="text" name="message" ng-model="note.message" placeholder="Message">
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div ng-controller="NotesCtrl" data-ng-init="getNotes()">
+    <div class="noteContent" ng-repeat="note in notes">
+        <ul>
+            <li>{{note.created}}</li>
+            <li>{{note.subject}}</li>
+            <li>{{note.message}}</li>
+            <li><a href="#" ng-click="delete(note.id)">delete</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
