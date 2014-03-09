@@ -1,4 +1,4 @@
-package com.example.notes.core;
+package com.example.notes.core.service;
 
 import com.example.notes.api.NoteJson;
 import com.example.notes.core.model.Note;
@@ -19,7 +19,6 @@ public class NoteService {
 
     public NoteService(DB db) {
         noteDao = new NoteDao(db);
-
     }
 
     public List<Note> getAll() {

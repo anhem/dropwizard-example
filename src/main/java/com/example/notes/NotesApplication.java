@@ -2,10 +2,9 @@ package com.example.notes;
 
 import com.example.notes.config.MongoDBConfiguration;
 import com.example.notes.config.NotesApplicationConfiguration;
-import com.example.notes.core.NoteService;
+import com.example.notes.core.service.NoteService;
 import com.example.notes.health.MongoHealthCheck;
 import com.example.notes.health.MongoManaged;
-import com.example.notes.mdb.NoteDao;
 import com.example.notes.resources.NotesResource;
 import com.mongodb.DB;
 import com.mongodb.MongoClient;

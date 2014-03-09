@@ -1,8 +1,8 @@
 package com.example.notes.resources;
 
 import com.example.notes.api.NoteJson;
-import com.example.notes.core.NoteService;
 import com.example.notes.core.model.Note;
+import com.example.notes.core.service.NoteService;
 import com.yammer.metrics.annotation.Timed;
 
 import javax.validation.Valid;
