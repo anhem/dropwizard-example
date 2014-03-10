@@ -16,28 +16,28 @@ public class NoteJson {
     @NotEmpty
     private String subject;
     @NotEmpty
-    private String message;
+    private String text;
 
     public static NoteJson create(Note note) {
         return new NoteJson(
                 note.get_id().toString(),
                 note.getCreated(),
                 note.getSubject(),
-                note.getMessage()
+                note.getText()
         );
     }
 
-    public NoteJson(@JsonProperty("subject") String subject, @JsonProperty("message") String message) {
+    public NoteJson(@JsonProperty("subject") String subject, @JsonProperty("text") String text) {
         this.created = new Date();
         this.subject = subject;
-        this.message = message;
+        this.text = text;
     }
 
-    public NoteJson(String id, Date created, String subject, String message) {
+    public NoteJson(String id, Date created, String subject, String text) {
         this.id = id;
         this.created = created;
         this.subject = subject;
-        this.message = message;
+        this.text = text;
     }
 
     public String getId() {
@@ -64,11 +64,11 @@ public class NoteJson {
         this.subject = subject;
     }
 
-    public String getMessage() {
-        return message;
+    public String getText() {
+        return text;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setText(String text) {
+        this.text = text;
     }
 }

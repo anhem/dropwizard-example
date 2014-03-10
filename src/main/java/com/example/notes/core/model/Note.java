@@ -10,7 +10,7 @@ public class Note {
     private ObjectId _id;
     private Date created;
     private String subject;
-    private String message;
+    private String text;
 
     public ObjectId get_id() {
         return _id;
@@ -36,19 +36,19 @@ public class Note {
         this.subject = subject;
     }
 
-    public String getMessage() {
-        return message;
+    public String getText() {
+        return text;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public static Note create(NoteJson noteJson) {
         Note note = new Note();
         note.created = noteJson.getCreated();
         note.subject = noteJson.getSubject();
-        note.message = noteJson.getMessage();
+        note.text = noteJson.getText();
         return note;
     }
 }
